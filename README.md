@@ -3,7 +3,7 @@ Introduction:
 
 RNG generators based on nuclear decay are a good source of random number. The working principle is relatively simple: they convert the detection of particles in random numbers, using different algorithms. My appliance uses an Arduino board (Diecimila) with a Geiger shield. Both hardware and software components are explained in detail in the following paragraphs.
 
-![alt text](./screenshoots/scatter.png "scatter graph")
+![alt text](./screenshoots/rng_appliance-b.jpg "scatter graph")
 
 Hardware:
 =========
@@ -36,7 +36,7 @@ Test:
 
 Generated a first sample of 100k random bytes (aka 200k couples of hex digits), I started with basic tests, average value, single values distributions, scatter diagrams. This is the scatter diagram composed using 4 bytes for each point (2 bytes X, 2 bytes Y):
 
-![alt text](./screenshoots/rng_appliance-b.jpg "scatter graph")
+![alt text](./screenshoots/scatter.png "scatter graph")
 
 Then, after the basic testing just explained, I tested my sequence with ENT (see here: https://www.fourmilab.ch/random/). ENT is a command line tool providing a way to perform common test on a random sequence to verify the quality of its random numbers.
 
