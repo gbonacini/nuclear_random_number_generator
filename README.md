@@ -12,8 +12,8 @@ The days after Fukushima disaster (2011), I and someone I knew bought Geiger cou
 
 My first requirement for the instrument I was about to buy was that it had to be a fully documented or, better, an open source project , the second requirement was that it had to be a programmable tool.  I found an Arduino shield ( now discontinued ), produced from company called Cooking-Hacks, able to satisfy both those requirements.
 
-Algoritm:
-=========
+Algorithm:
+==========
 
 The RNG algorithm is made very simple relying on interrupts: in the main loop a register is cyclically increased from 0 to n, when it reaches n is reset  to 0. When a particle is detected an interrupt is raised, the main loop is paused and the routine associated to the interrupt is executed, returning the last value of the register as random number then the register is reset to zero and the main loop resumed.
 The chosen range is 0-15 represented using hexadecimal digits (0-9A-F), that is convenient because two hex digits represent a full random byte.   
