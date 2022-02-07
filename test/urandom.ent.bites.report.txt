@@ -1,0 +1,17 @@
+Value Char Occurrences Fraction
+  0           818562   0.499611
+  1           819838   0.500389
+
+Total:       1638400   1.000000
+
+Entropy = 1.000000 bits per bit.
+
+Optimum compression would reduce the size
+of this 1638400 bit file by 0 percent.
+
+Chi square distribution for 1638400 samples is 0.99, and randomly
+would exceed this value 31.88 percent of the times.
+
+Arithmetic mean value of data bits is 0.5004 (0.5 = random).
+Monte Carlo value for Pi is 3.128116486 (error 0.43 percent).
+Serial correlation coefficient is 0.000224 (totally uncorrelated = 0.0).
