@@ -62,8 +62,8 @@ namespace geigerrng {
                                    time,
                                    countPrevious;
             float                  radiationValue;
-            static unsigned short  roulette,
-                                   lastRnd;
+            static unsigned int    roulette;
+            static unsigned short  lastRnd;
 
             LiquidCrystal          lcd;
 
