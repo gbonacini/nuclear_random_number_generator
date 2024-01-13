@@ -23,7 +23,7 @@ namespace geigerrng {
     long           GeigerRng::genCount{0};
     long           GeigerRng::lastCount{0};
     GeigerRng*     GeigerRng::instance{nullptr};
-    unsigned short GeigerRng::roulette{0};
+    unsigned int   GeigerRng::roulette{0};
     unsigned short GeigerRng::lastRnd{GeigerRng::INVALID_RESULT};
     const char     GeigerRng::VALUES[MAX_RESULT+1] = { '0','1','2','3','4','5','6','7','8','9','A','B','C','D','E','F'};
 
@@ -31,8 +31,7 @@ namespace geigerrng {
            detachInterrupt(0);
            GeigerRng::count++;
            GeigerRng::genCount++;
-           GeigerRng::lastRnd  = GeigerRng::roulette;
-           GeigerRng::roulette = GeigerRng::MIN_RESULT;
+           GeigerRng::lastRnd  = GeigerRng::roulette % ( MAX_RESULT + 1 );
            while(digitalRead(GEIGER_PIN)==0);  
            attachInterrupt(0,GeigerRng::increaseCount,FALLING);
     }
@@ -87,7 +86,6 @@ namespace geigerrng {
 
     void GeigerRng::detect(void){
            GeigerRng::roulette++;
-           if(roulette > GeigerRng::MAX_RESULT) roulette = GeigerRng::MIN_RESULT;
 
            if(millis() - timePreviousPrint > GeigerRng::PRINT_RATE){
                timePreviousPrint = millis();
